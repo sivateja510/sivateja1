@@ -1,0 +1,281 @@
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ pwd
+/c/Users/admin/Desktop/git hub
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ touch one
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ touch two.c
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ touch new.txt
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ touch new.html
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ ls -a
+./  ../  new.html  new.txt  one  two.c
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git init
+Initialized empty Git repository in C:/Users/admin/Desktop/git hub/.git/
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ ls -a
+./  ../  .git/  new.html  new.txt  one  two.c
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git add .
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   new.html
+        new file:   new.txt
+        new file:   one
+        new file:   two.c
+
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git commit -m "added files"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'admin@DESKTOP-FQ29TOK.(none)')
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git config user.email "20A91A0510@aec.edu.in"
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git config user.name "sivateja510"
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git commit -m "added files
+> ^C
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git commit -m "added files"
+[master (root-commit) 4b99952] added files
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.html
+ create mode 100644 new.txt
+ create mode 100644 one
+ create mode 100644 two.c
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git log
+commit 4b999523b85bf580ca47ccffcf7b3e58a9cf7bd8 (HEAD -> master)
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:03:14 2021 +0530
+
+    added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ touch hello.c
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git add .
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git commit -m " senond added files"
+[master 1b12a18]  senond added files
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.c
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git log
+commit 1b12a1824a5c3fc2c9b0683961727de66ec1de5d (HEAD -> master)
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:04:36 2021 +0530
+
+     senond added files
+
+commit 4b999523b85bf580ca47ccffcf7b3e58a9cf7bd8
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:03:14 2021 +0530
+
+    added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git log --oneline
+1b12a18 (HEAD -> master)  senond added files
+4b99952 added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ ^C
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git checkout 1b12a18
+Note: switching to '1b12a18'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 1b12a18  senond added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((1b12a18...))
+$ git log
+commit 1b12a1824a5c3fc2c9b0683961727de66ec1de5d (HEAD, master)
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:04:36 2021 +0530
+
+     senond added files
+
+commit 4b999523b85bf580ca47ccffcf7b3e58a9cf7bd8
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:03:14 2021 +0530
+
+    added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((1b12a18...))
+$ git checkout 1b12a18
+HEAD is now at 1b12a18  senond added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((1b12a18...))
+$ git log
+commit 1b12a1824a5c3fc2c9b0683961727de66ec1de5d (HEAD, master)
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:04:36 2021 +0530
+
+     senond added files
+
+commit 4b999523b85bf580ca47ccffcf7b3e58a9cf7bd8
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:03:14 2021 +0530
+
+    added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((1b12a18...))
+$ git log
+commit 1b12a1824a5c3fc2c9b0683961727de66ec1de5d (HEAD, master)
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:04:36 2021 +0530
+
+     senond added files
+
+commit 4b999523b85bf580ca47ccffcf7b3e58a9cf7bd8
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:03:14 2021 +0530
+
+    added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((1b12a18...))
+$ git checkout 4b99952
+Previous HEAD position was 1b12a18  senond added files
+HEAD is now at 4b99952 added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((4b99952...))
+$ git log
+commit 4b999523b85bf580ca47ccffcf7b3e58a9cf7bd8 (HEAD)
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:03:14 2021 +0530
+
+    added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((4b99952...))
+$ git status
+HEAD detached at 4b99952
+nothing to commit, working tree clean
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((4b99952...))
+$ git checkout 4b99952
+HEAD is now at 4b99952 added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((4b99952...))
+$ git log
+commit 4b999523b85bf580ca47ccffcf7b3e58a9cf7bd8 (HEAD)
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:03:14 2021 +0530
+
+    added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((4b99952...))
+$ git checkout master
+Previous HEAD position was 4b99952 added files
+Switched to branch 'master'
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git log
+commit 1b12a1824a5c3fc2c9b0683961727de66ec1de5d (HEAD -> master)
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:04:36 2021 +0530
+
+     senond added files
+
+commit 4b999523b85bf580ca47ccffcf7b3e58a9cf7bd8
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:03:14 2021 +0530
+
+    added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$ git checkout 4b99952
+Note: switching to '4b99952'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 4b99952 added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((4b99952...))
+$ git checkout HEAD
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((4b99952...))
+$ git log
+commit 4b999523b85bf580ca47ccffcf7b3e58a9cf7bd8 (HEAD)
+Author: sivateja510 <20A91A0510@aec.edu.in>
+Date:   Sun Nov 21 02:03:14 2021 +0530
+
+    added files
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub ((4b99952...))
+$ git checkout master
+Previous HEAD position was 4b99952 added files
+Switched to branch 'master'
+
+admin@DESKTOP-FQ29TOK MINGW64 ~/Desktop/git hub (master)
+$
